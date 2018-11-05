@@ -9,7 +9,7 @@ class Snake {
     // From Key Event into storing another variable //
     setDir(x,y) {
         this.xdir = x;
-        this.ydir = y
+        this.ydir = y;
     }
     // Loop for the Movement of the Snake //
     update() {
@@ -20,6 +20,7 @@ class Snake {
     }
     // How the snake will look like //
     show() {
+        noStroke();
         fill(50);
         rect(this.body[0].x, this.body[0].y, 1, 1);
 

@@ -11,16 +11,18 @@ let h;
 // Graphics //
 function setup() {
 	createCanvas(800, 500);
+	frameRate(10);
 	w = floor(width / rez);
 	h = floor(height / rez);
 	snake = new Snake();
+	foodLocation();
 }
 
 // The location where the food is located //
 function foodLocation() {
 	let x = floor(random(w));
 	let y = floor(random(h));
-	food = createVector( x, y)
+	food = createVector( x, y);
 }
 
 // Key Event //
@@ -50,7 +52,8 @@ function draw() {
 	snake.update();
 	snake.show();
 
-	fill(255, 50, 100)
-	rect(food.x, food.y, 1, 1)
+	noStroke();
+	fill(255, 50, 100);
+	rect(food.x, food.y, 1, 1);
 }
 
