@@ -12,18 +12,13 @@ class Snake {
         this.xdir = x;
         this.ydir = y;
     }
-    // Loop for the Movement of the Snake //
+    // Loop for the Movement of the Snake and Growth Affect //
     update() {
         let head = this.body[this.body.length-1].copy();
         this.body.shift();
         head.x += this.xdir;
         head.y += this.ydir;
         this.body.push(head);
-
-
-        //this.body[0].x += this.xdir; // We could write this as 'this.body[0].x = this.body[0].x + this.xdir;' (basic increment) //
-        //this.body[0].y += this.ydir; // Same goes for this guy //
-
     }
     // How the snake will look like //
     show() {
