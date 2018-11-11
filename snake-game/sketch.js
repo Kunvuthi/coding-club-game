@@ -2,7 +2,7 @@
 
 // Local Variables //
 let snake;
-let rez = 10;
+let rez = 20;
 let food;
 let w;
 let h;
@@ -50,7 +50,11 @@ function draw() {
 	scale(rez);
 	background(220);
 	snake.update();
+	if(snake.eat(food)) {
+		foodLocation();
+	}
 	snake.show();
+
 
 	noStroke();
 	fill(255, 50, 100);
